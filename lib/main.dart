@@ -1,3 +1,5 @@
+import 'package:deliMeals/categories_screen.dart';
+import 'package:deliMeals/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +14,28 @@ class MyApp extends StatelessWidget {
       title: 'DeliMeals',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        accentColor: Colors.amber,
+        canvasColor: Colors.white70,
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              bodyText1: TextStyle(color: Colors.green),
+              bodyText2: TextStyle(color: Colors.orange),
+              headline6: TextStyle(
+                fontSize: 20,
+                fontFamily: 'RobotCondense',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Navigation Time!'),
+      home: CategoriesScreen(),
+
+      //Se crean los nombres de las rutas para el cambio de vista
+      initialRoute: '/',
+      routes: {
+        '/': (ctx) => CategoriesScreen(),
+        CategoryMealsScreen.routeName:(context)=>CategoryMealsScreen(),
+      },
     );
   }
 }
@@ -30,14 +51,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   //Metodo que relanza la aplicacion cada vez que se llama al setState
   @override
   Widget build(BuildContext context) {
