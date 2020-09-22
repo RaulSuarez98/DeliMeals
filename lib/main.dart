@@ -1,8 +1,9 @@
-import 'package:deliMeals/screens/categories_screen.dart';
-import 'package:deliMeals/screens/category_meals_screen.dart';
-import 'package:deliMeals/screens/meal_detail_screen.dart';
-import 'package:flutter/material.dart';
+import './screens/category_meals_screen.dart';
 import './screens/meal_detail_screen.dart';
+import './screens/tabs_screen.dart';
+
+import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
       //Se crean los nombres de las rutas para el cambio de vista
       initialRoute: '/',
       routes: {
-        '/': (ctx) => CategoriesScreen(),
+        '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName:(context)=>CategoryMealsScreen(),
         MealDetailScreen.routeName: (context)=>MealDetailScreen(),
       },
