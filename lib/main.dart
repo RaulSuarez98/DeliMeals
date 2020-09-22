@@ -1,3 +1,4 @@
+import './screens/filter_screen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/meal_detail_screen.dart';
 import './screens/tabs_screen.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName:(context)=>CategoryMealsScreen(),
         MealDetailScreen.routeName: (context)=>MealDetailScreen(),
+        FilterScreen.routeName: (context)=>FilterScreen(),
       },
      //utilizarlo para que si la aplicacion falla devuelva al menos una pagina de error
      // onUnknownRoute: ,
