@@ -1,6 +1,8 @@
 import 'package:deliMeals/screens/categories_screen.dart';
 import 'package:deliMeals/screens/category_meals_screen.dart';
+import 'package:deliMeals/screens/meal_detail_screen.dart';
 import 'package:flutter/material.dart';
+import './screens/meal_detail_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +36,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => CategoriesScreen(),
         CategoryMealsScreen.routeName:(context)=>CategoryMealsScreen(),
+        MealDetailScreen.routeName: (context)=>MealDetailScreen(),
       },
+     //utilizarlo para que si la aplicacion falla devuelva al menos una pagina de error
+     // onUnknownRoute: ,
     );
   }
 }
