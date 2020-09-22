@@ -1,7 +1,7 @@
 import 'package:deliMeals/dummy_data.dart';
 import 'package:flutter/material.dart';
 
-import './category_item.dart';
+import '../widgets/category_item.dart';
 
 
 //Vista de las categorias de comidas

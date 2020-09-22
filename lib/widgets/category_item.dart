@@ -1,4 +1,4 @@
-import 'package:deliMeals/category_meals_screen.dart';
+import 'package:deliMeals/screens/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
 
