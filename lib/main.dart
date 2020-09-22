@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
             ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: CategoriesScreen(),
 
       //Se crean los nombres de las rutas para el cambio de vista
       initialRoute: '/',

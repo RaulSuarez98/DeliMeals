@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'dummy_data.dart';
 
 //Pagina creada de manera dinamica para cada categoria de comida
 class CategoryMealsScreen extends StatelessWidget {
@@ -21,14 +22,17 @@ class CategoryMealsScreen extends StatelessWidget {
 
     final categoryTitle = routeArgs['title'];
     final categoryId = routeArgs['id'];
+    final categoryMeals=DUMMY_MEALS.where((meal){
+      return meal.categories.contains(categoryId);
+    }).toList();
 
     return Scaffold(
         appBar: AppBar(
           title: Text(categoryTitle),
         ),
         body: ListView.builder(itemBuilder: (context, index) {
-
-        }, itemCount:,)
+    return Text(categoryMeals[index].title);
+        }, itemCount:categoryMeals.length,)
     );
   }
 }
